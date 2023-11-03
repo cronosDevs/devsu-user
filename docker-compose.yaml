@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:latest
+    container_name: mi_mysql
+    ports:
+      - "3306:3306"  # Mapea el puerto 3306 del contenedor al puerto 3306 del host
+    environment:
+      MYSQL_ROOT_PASSWORD: root  # Establece la contraseña de root
+    networks:
+      - mi_red
+
+networks:
+  mi_red:
