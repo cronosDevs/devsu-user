@@ -1,0 +1,16 @@
+application-name: user-api
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/public
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: update
+        dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  port: 8080
+  servlet:
+    context-path: /api-user
